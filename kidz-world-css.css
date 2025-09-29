@@ -1,1 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.flex {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+nav {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav img {
+  height: 40px;
+  width: auto;
+}
+
+#cart {
+  color: rgb(0, 0, 0);
+}
+#cart img {
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+#cart p {
+  font-weight: 600;
+  margin: 0;
+}
+
+header {
+  color: rgb(0, 0, 0);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.header-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.flex-header-text {
+  flex-direction: column;
+  gap: 1rem;
+}
+.header-text h5 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  opacity: 0.9;
+}
+
+.section-container {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  margin: 3rem 0;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.container {
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.container > div {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 280px;
+}
+
+.container > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.books, .games, .crafts {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.container h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.container h4 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.buy {
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.buy p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ff6b6b;
+  margin: 0;
+}
+
+.button {
+  background: linear-gradient(135deg, #ff6b6b, #ff5252);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #ff5252, #ff4444);
+  transform: scale(1.05);
+}
+
+.button h6 {
+  margin: 0 0.5rem 0 0;
+  font-size: 0.9rem;
+}
+
+.button img {
+  height: 16px;
+  width: 16px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+footer img {
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+}
+
+#details {
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+#details h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+#details p {
+  margin: 0.2rem 0;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    padding: 1.5rem 4rem;
+  }
+  
+  nav img {
+    height: 50px;
+  }
+  
+  header {
+    padding: 6rem 4rem;
+  }
+  
+  .header-text {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-text h1 {
+    font-size: 4rem;
+  }
+  
+  .section-container {
+    padding: 4rem;
+  }
+  
+  .container {
+    justify-content: space-between;
+  }
+  
+  .container > div {
+    width: calc(16.66% - 1rem);
+    min-width: 250px;
+  }
+  
+  .games {
+    height: 180px;
+  }
+  
+  footer {
+    padding: 3rem 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    padding: 1rem 3rem;
+  }
+  
+  header {
+    padding: 4rem 3rem;
+  }
+  
+  .header-text {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-text h1 {
+    font-size: 3rem;
+  }
+  
+  .section-container {
+    padding: 3rem;
+  }
+  
+  .container {
+    justify-content: space-around;
+  }
+  
+  .container > div {
+    width: calc(33.33% - 1rem);
+    min-width: 220px;
+  }
+  
+  footer {
+    padding: 2rem 3rem;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  #details {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  nav img {
+    height: 35px;
+  }
+  
+  #cart {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  #cart img {
+    height: 16px;
+  }
+  
+  #cart p {
+    font-size: 0.9rem;
+  }
+  
+  header {
+    padding: 3rem 1rem;
+  }
+  
+  .header-text {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header-text h5 {
+    font-size: 1rem;
+  }
+  
+  .section-container {
+    padding: 1rem;
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .container > div {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .books, .games, .crafts {
+    height: 250px;
+  }
+  
+  .container h3 {
+    font-size: 1.2rem;
+  }
+  
+  .container h4 {
+    font-size: 0.9rem;
+  }
+  
+  .buy p {
+    font-size: 1.2rem;
+  }
+  
+  .button {
+    padding: 0.6rem 1rem;
+  }
+  
+  footer {
+    padding: 2rem 1rem;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  footer h2 {
+    font-size: 1.3rem;
+  }
+  
+  footer img {
+    height: 50px;
+  }
+  
+  #details {
+    align-items: center;
+    text-align: center;
+  }
+  
+  #details h3 {
+    font-size: 1.2rem;
+  }
+  
+  #details p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-text h1 {
+    font-size: 2rem;
+  }
+  
+  .section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .container > div {
+    padding: 1rem;
+  }
+  
+  .books, .games, .crafts {
+    height: 200px;
+  }
+  
+  .container h3 {
+    font-size: 1.1rem;
+  }
+  
+  .buy {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .buy p {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  
+  .button {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (hover: hover) {
+  .container > div:hover {
+    transform: translateY(-8px);
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+  }
+  
+  #cart:hover {
+    transform: scale(1.02);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.books, .games, .crafts {
+  transition: opacity 0.3s ease;
+}
+
+.books:hover, .games:hover, .crafts:hover {
+  opacity: 0.9;
+}
